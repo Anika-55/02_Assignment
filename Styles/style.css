@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    max-width: 1240px;
+    /* max-width: 1240px; */
     box-sizing: border-box;
 }
 /* header section */
@@ -48,9 +48,13 @@ div .light{
 }
 .banner-left{
     margin-left:200px;
+    /* margin-right: 150px; */
     justify-content: center;
     align-items: center;
     margin-top: 150px; 
+}
+.banner-right{
+    margin-right: 150px;
 }
 .banner-left h2{
     font-size: 55px;
@@ -161,6 +165,7 @@ div .light{
     height:520px ;
     width: 540px;
     margin-left: 80px;
+    margin-right: 100px;
 }
 .text-content h2{
     margin-top: 0;
@@ -178,77 +183,291 @@ div .light{
     font-weight: 100;
     gap: 5px;
 }
+/* second challenge section styles */
+.latest{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center; 
+}
+.latest h2{
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.latest p{
+    width:888px ;
+    height:54px ;
+    font-weight: 100;
+    font-size: 15px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+/* Footer styles */
 
 
+.footer-form{
+    justify-content: center;
+    align-content: center;
+    
+} 
+
+/* section-1 styles */
+
+.offer-section{
+    padding: 20px;
+}
+
+.offer-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.left-stack{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 140px;
+}
+
+.offer-card{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.offer-card img{
+    display: block;
+    border-radius: 10px;
+}
+.offer-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px #fff;
+}
+.offer-text a{
+    display: block;
+    margin-top: 5px;
+    color: #fff;
+    text-decoration: underline;
+}
 
 
+/* section 2 style */
+
+.newsletter-section {
+    background: url(../assets/news-letter-bg.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+    text-align: center;
+    /* justify-content: center;
+    align-items: center; */
+    color: #fff;
+    margin-top: 100px;
+}
+
+.newsletter-content h2{
+    font-size: 2rem;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.newsletter-form{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.newsletter-form input{
+    padding: 10px;
+    width: 300px;
+    border: none;
+}
+
+.newsletter-form button{
+    padding: 10px 20px;
+    background-color:rgb(244, 95, 41); 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
 
 
+/* footer */
+.footer{
+    background-color: #f9f9f9;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+   
+}
+.footer-container{
+    max-width: 1120px; 
+    height: 248px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; 
+}
 
+.footer-left{
+    flex: 1;
+    width: 359px;
+    height: 179px;
+    margin-left: 160px;
+} 
+.footer-left img{
+   margin-bottom: 10px;
+} 
 
+.footer-left p{
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
 
-
-
+.footer-links{
+  display: flex;
+  gap: 20px;
+  flex: 2;
+  min-width: 300px;
+  justify-content: center;
+ }
 
 
 /* Responsive css */
-/* @media screen and (max-width:676px) {
-    .container{
-        margin: 0 10px;
+/* -- For Mobile Phones (screens smaller than 768px) -- */
+
+@media (max-width: 768px) {
+
+    /* --- General Layout Adjustments --- */
+    body {
+        overflow-x: hidden; /* Prevent any accidental side-scrolling */
     }
-    .banner{
-        flex-direction: column-reverse;
+
+    /* --- Header & Navigation --- */
+    .logo-section {
+        gap: 20px;
+    }
+    .logo img {
+        margin:0; /* Remove side margin */
+    }
+    .logo-section ul {
+        flex-direction: row;
+        width: 100%;
+        gap: 10px;
+    }
+    .logo-section li {
+        padding: 10px;
+        text-align: center;
+        width: 90%;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+    }
+
+    /* --- Banner Section --- */
+    .banner {
+        flex-direction: column;
+        margin: 40px 0;
+        padding: 0 20px;
+         text-align: center; 
+        
+    }
+    .banner-left {
+        margin: 0;
+    }
+    .banner-right {
+        margin: 10px 5px 10px 10px;
+    }
+    .banner-left h2 {
+        font-size: 42px; /* Adjust font size for mobile */
+    }
+
+    /* --- Our Plants Section --- */
+    .plants {
+        margin: 40px 20px; /* Adjust margin for mobile */
+    }
+    .our-plants .our-plants-title {
+        font-size: 38px;
+    }
+
+    /* --- Flower Card Section (2 Cards per Row) --- */
+    .flower-card-section {
+        grid-template-columns: repeat(2, 1fr); /* KEY CHANGE: 2 cards in a row */
+        gap: 15px;
+        margin: 10px 25px 10px 25px;
+        padding: 20px;
+    }
+
+    /* --- Challenge Section --- */
+    .challenge-section {
+        flex-direction: column;
+        margin:10px 30px 10px 30px;
+        padding: 20px;
         text-align: center;
     }
-    .banner .banner-left{
-        margin-bottom: 50px;
-        padding-left: 0;
-        padding-top: 25px;
+    .main-img {
+        margin: 0; /* Center the image */
     }
-    .banner .banner-left p{
-        margin: 15px auto;
-    .banner-right img{
-       max-width:100%;
+    .badge-img {
+        display: none; /* KEY CHANGE: Hide the badge image */
+    }
+    .text-content {
+        align-items: center;
+        margin:0;
+    }
+    .text-content h2 {
+        font-size: 38px;
+    }
+    
+    /* --- Latest Deals Section --- */
+    .latest p {
+        padding: 0 20px;
+        margin-bottom: 40px;
+    }
+
+    /* --- Offer Section --- */
+    .offer-grid {
+        grid-template-columns: 1fr; /* Stack into a single column */
+    }
+    .left-stack {
+        margin: 0; /* Remove side margin */
+    }
+
+    /* --- Newsletter & Footer --- */
+    .newsletter-section {
+        height: auto; /* Let height be automatic */
+        padding: 60px 20px;
+    }
+    .newsletter-form input, .newsletter-form button {
+        width: 90%; /* Make form elements mostly full-width */
+    }
+    .footer-container, .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    .footer-left {
+        width: auto;
+        margin: 0;
     }
 }
-} */
+  
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
